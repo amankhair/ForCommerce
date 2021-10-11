@@ -1,0 +1,201 @@
+@inherits LayoutComponentBase
+
+<main class="page-wrapper">
+    <!-- Sign In Modal-->
+    <div class="modal fade" id="modal-signin" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content border-0">
+                        <div class="view show" id="modal-signin-view">
+                            <div class="modal-header border-0 bg-dark px-4">
+                                <h4 class="modal-title text-light">Sign in</h4>
+                                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="btn-close "></button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <p class="fs-ms text-muted">Sign in to your account using email and password provided during registration.</p>
+                                <form class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <div class="input-group"><i class="ai-mail position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                                            <input class="form-control rounded" type="email" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="input-group"><i class="ai-lock position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                                            <div class="password-toggle w-100">
+                                                <input class="form-control" type="password" placeholder="Password" required>
+                                                <label class="password-toggle-btn" aria-label="Show/hide password">
+                                                    <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3 mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="keep-signed">
+                                            <label class="form-check-label fs-sm" for="keep-signed">Keep me signed in</label>
+                                        </div><a class="nav-link-style fs-ms" href="password-recovery.html">Forgot password?</a>
+                                    </div>
+                                    <button class="btn btn-primary d-block w-100" type="submit">Sign in</button>
+                                    <p class="fs-sm pt-3 mb-0">Don't have an account? <a href='#' class='fw-medium' data-view='#modal-signup-view'>Sign up</a></p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="view" id="modal-signup-view">
+                            <div class="modal-header border-0 bg-dark px-4">
+                                <h4 class="modal-title text-light">Sign up</h4>
+                                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="btn-close"></button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <p class="fs-ms text-muted">Registration takes less than a minute but gives you full control over your orders.</p>
+                                <form class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <input class="form-control" type="text" placeholder="Full name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input class="form-control" type="text" placeholder="Email" required>
+                                    </div>
+                                    <div class="mb-3 password-toggle">
+                                        <input class="form-control" type="password" placeholder="Password" required>
+                                        <label class="password-toggle-btn" aria-label="Show/hide password">
+                                            <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                                        </label>
+                                    </div>
+                                    <div class="mb-3 password-toggle">
+                                        <input class="form-control" type="password" placeholder="Confirm password" required>
+                                        <label class="password-toggle-btn" aria-label="Show/hide password">
+                                            <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-primary d-block w-100" type="submit">Sign up</button>
+                                    <p class="fs-sm pt-3 mb-0">Already have an account? <a href='#' class='fw-medium' data-view='#modal-signin-view'>Sign in</a></p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-body text-center px-4 pt-2 pb-4">
+                            <hr class="my-0">
+                            <p class="fs-sm fw-medium text-heading pt-4">Or sign in with</p><a class="btn-social bs-facebook bs-lg mx-1 mb-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-twitter bs-lg mx-1 mb-2" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-instagram bs-lg mx-1 mb-2" href="#"><i class="ai-instagram"></i></a><a class="btn-social bs-google bs-lg mx-1 mb-2" href="#"><i class="ai-google"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- Shopping cart off-canvas-->
+    <div class="offcanvas offcanvas-end" id="shoppingCart">
+                    <div class="offcanvas-cap navbar-shadow px-4 mb-2">
+                        <h5 class="mt-1 mb-0">Your cart</h5>
+                        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body p-4" data-simplebar>
+                        <div class="d-flex align-items-center mb-3"><a class="d-block flex-shrink-0" href="shop-single.html"><img class="rounded" src="img/demo/shop-homepage/thumbnails/05.jpg" alt="Product" width="60"></a>
+                            <div class="w-100 ps-2 ms-1">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="me-3">
+                                        <h4 class="nav-heading fs-md mb-1"><a class="fw-medium" href="shop-single.html">Smart Watch Series 5</a></h4>
+                                        <div class="d-flex align-items-center fs-sm"><span class="me-2">$364.99</span><span class="me-2">x</span>
+                                            <input class="form-control form-control-sm px-2" type="number" style="max-width: 3.5rem;" min="1" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="ps-3 border-start"><a class="d-block text-danger text-decoration-none fs-xl" href="#" data-bs-toggle="tooltip" title="Remove"><i class="ai-x-circle"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3"><a class="d-block flex-shrink-0" href="shop-single.html"><img class="rounded" src="img/demo/shop-homepage/thumbnails/02.jpg" alt="Product" width="60"></a>
+                            <div class="w-100 ps-2 ms-1">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="me-3">
+                                        <h4 class="nav-heading fs-md mb-1"><a class="fw-medium" href="shop-single.html">Running Sneakers, Collection</a></h4>
+                                        <div class="d-flex align-items-center fs-sm"><span class="me-2">$145.00</span><span class="me-2">x</span>
+                                            <input class="form-control form-control-sm px-2" type="number" style="max-width: 3.5rem;" min="1" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="ps-3 border-start"><a class="d-block text-danger text-decoration-none fs-xl" href="#" data-bs-toggle="tooltip" title="Remove"><i class="ai-x-circle"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3"><a class="d-block flex-shrink-0" href="shop-single.html"><img class="rounded" src="img/demo/shop-homepage/thumbnails/06.jpg" alt="Product" width="60"></a>
+                            <div class="w-100 ps-2 ms-1">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="me-3">
+                                        <h4 class="nav-heading fs-md mb-1"><a class="fw-medium" href="shop-single.html">Wireless Bluetooth Headset</a></h4>
+                                        <div class="d-flex align-items-center fs-sm"><span class="me-2">$258.00</span><span class="me-2">x</span>
+                                            <input class="form-control form-control-sm px-2" type="number" style="max-width: 3.5rem;" min="1" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="ps-3 border-start"><a class="d-block text-danger text-decoration-none fs-xl" href="#" data-bs-toggle="tooltip" title="Remove"><i class="ai-x-circle"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offcanvas-cap d-block border-top px-4 mb-2">
+                        <div class="d-flex justify-content-between mb-4"><span>Total:</span><span class="h6 mb-0">$776.99</span></div><a class="btn btn-primary btn-sm d-block w-100" href="checkout.html"><i class="ai-credit-card fs-base me-2"></i>Checkout</a>
+                    </div>
+                </div>
+    <!-- Navbar (Solid background + shadow)-->
+    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+    <header class="header">
+        <Topbar/>
+        <Searchbar/>
+        <Navbar/>
+    </header>
+    <!-- Page content-->
+    @Body
+</main>
+
+<!-- Footer-->
+<footer class="footer bg-dark mt-5">
+        <div class="bg-darker pt-2">
+            <div class="container py-sm-3">
+                <div class="row pb-4 mb-2 pt-5 py-md-5">
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-truck text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-base text-light mb-1">Fast and free delivery</h6>
+                                <p class="mb-0 fs-xs text-light opacity-50">Free delivery for all orders over $200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-refresh-cw text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-base text-light mb-1">Money back guarantee</h6>
+                                <p class="mb-0 fs-xs text-light opacity-50">We return money within 30 days</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-life-buoy text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-base text-light mb-1">24/7 customer support</h6>
+                                <p class="mb-0 fs-xs text-light opacity-50">Friendly 24/7 customer support</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-credit-card text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-base text-light mb-1">Secure online payment</h6>
+                                <p class="mb-0 fs-xs text-light opacity-50">We possess SSL / Secure сertificate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-light my-0 mb-5">
+                <div class="d-sm-flex align-items-center mb-4 pb-3">
+                    <div class="d-flex flex-wrap align-items-center me-3"><a class="d-block me-grid-gutter mt-n1 mb-3" href="index.html" style="width: 108px;"><img src="img/logo/logo-footer.png" alt="Around"></a>
+                        <ul class="list-inline fs-sm pt-2 mb-3">
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">About</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Outlets</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Affiliates</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Support</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Terms of use</a></li>
+                        </ul>
+                    </div>
+                    <div class="d-flex pt-2 pt-sm-0 ms-auto"><a class="btn-social bs-twitter bs-light me-2 mb-2" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-facebook bs-light me-2 mb-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-instagram bs-light me-2 mb-2" href="#"><i class="ai-instagram"></i></a><a class="btn-social bs-pinterest bs-light me-2 mb-2" href="#"><i class="ai-pinterest"></i></a><a class="btn-social bs-youtube bs-light mb-2" href="#"><i class="ai-youtube"></i></a></div>
+                </div>
+                <div class="d-sm-flex justify-content-between align-items-center pb-4 pb-sm-2">
+                    <div class="order-sm-2 mb-4 mb-sm-3"><img src="img/footer/cards.png" alt="Payment methods" width="181"></div>
+                    <div class="order-sm-1 mb-3">
+                        <p class="fs-ms mb-0"><span class="text-light opacity-50 me-1">© All rights reserved. Made by</span><a class="nav-link-style nav-link-light" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
